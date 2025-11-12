@@ -1,0 +1,87 @@
+/*
+Theme Name: WPSoft Library
+Theme URI: https://example.com/wpsoft-library
+Author: WPSoft Team
+Author URI: https://example.com
+Description: A responsive software library and tutorial theme inspired by xu5.cc, featuring custom software listings, version management, and resource navigation.
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: https://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: wpsoft
+Tags: custom-background, custom-menu, custom-logo, custom-post-type, responsive-layout, one-column, two-columns
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+  --wpsoft-bg: #f2f4f8;
+  --wpsoft-surface: #ffffff;
+  --wpsoft-primary: #0066ff;
+  --wpsoft-primary-dark: #0049b7;
+  --wpsoft-accent: #00c853;
+  --wpsoft-text: #1a1a1a;
+  --wpsoft-muted: #6b7280;
+  --wpsoft-border: #e5e7eb;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  background: var(--wpsoft-bg);
+  color: var(--wpsoft-text);
+  line-height: 1.6;
+}
+
+.wpsoft-container {
+  width: min(1200px, 94vw);
+  margin: 0 auto;
+  padding: 1.5rem 0 3rem;
+}
+
+.wpsoft-card {
+  background: var(--wpsoft-surface);
+  border-radius: 16px;
+  box-shadow: 0 24px 48px rgba(15, 23, 42, 0.06);
+  border: 1px solid rgba(15, 23, 42, 0.05);
+}
+
+.wpsoft-button,
+.wpsoft-button:visited {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.65rem 1.25rem;
+  border-radius: 10px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  color: #fff;
+  background: var(--wpsoft-primary);
+  box-shadow: 0 12px 24px rgba(0, 102, 255, 0.18);
+}
+
+.wpsoft-button:hover,
+.wpsoft-button:focus {
+  transform: translateY(-2px);
+  box-shadow: 0 16px 36px rgba(0, 102, 255, 0.2);
+  background: var(--wpsoft-primary-dark);
+  color: #fff;
+}
+
+.wpsoft-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.35rem 0.8rem;
+  border-radius: 999px;
+  background: rgba(0, 102, 255, 0.1);
+  color: var(--wpsoft-primary-dark);
+  font-weight: 600;
+  font-size: 0.85rem;
+}
+
+@media (max-width: 768px) {
+  .wpsoft-container {
+    padding-top: 1rem;
+  }
+}
