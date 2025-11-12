@@ -1,0 +1,441 @@
+.site-header {
+  background: linear-gradient(135deg, #1f2937, #111827);
+  color: #fff;
+  padding: 1rem 0 2rem;
+}
+
+.site-header .wpsoft-topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.site-header .site-branding {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.site-header .site-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.site-header .site-description {
+  margin: 0;
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.site-header .platform-links {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.platform-link {
+  padding: 0.5rem 0.95rem;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  color: #fff;
+}
+
+.platform-link.windows { background: #1d4ed8; box-shadow: 0 10px 25px rgba(29, 78, 216, 0.28); }
+.platform-link.mac { background: #7c3aed; box-shadow: 0 10px 25px rgba(124, 58, 237, 0.25); }
+.platform-link.android { background: #16a34a; box-shadow: 0 10px 25px rgba(22, 163, 74, 0.28); }
+
+.platform-link:hover,
+.platform-link:focus {
+  transform: translateY(-2px);
+}
+
+.wpsoft-search {
+  background: rgba(255, 255, 255, 0.12);
+  border-radius: 14px;
+  padding: 1rem;
+  margin-top: 1.25rem;
+  position: relative;
+}
+
+.wpsoft-search form {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.wpsoft-search-suggestions {
+  position: absolute;
+  top: calc(100% + 0.5rem);
+  left: 0;
+  right: 0;
+  display: none;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 16px 32px rgba(15, 23, 42, 0.12);
+  overflow: hidden;
+  border: 1px solid rgba(15, 23, 42, 0.08);
+}
+
+.wpsoft-search-suggestions .suggestion {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.75rem 1rem;
+  text-decoration: none;
+  color: #1f2937;
+  border-bottom: 1px solid rgba(15, 23, 42, 0.05);
+}
+
+.wpsoft-search-suggestions .suggestion:last-child {
+  border-bottom: none;
+}
+
+.wpsoft-search-suggestions .suggestion:hover {
+  background: rgba(37, 99, 235, 0.08);
+}
+
+.wpsoft-search-suggestions .type {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  color: var(--wpsoft-muted);
+  font-weight: 600;
+}
+
+.wpsoft-search input[type="search"] {
+  flex: 1;
+  padding: 0.75rem 1rem;
+  border-radius: 10px;
+  border: 0;
+  font-size: 1rem;
+}
+
+.wpsoft-search button {
+  border: 0;
+  border-radius: 10px;
+  background: #facc15;
+  color: #111827;
+  font-weight: 700;
+  padding: 0.75rem 1.5rem;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.wpsoft-search button:hover,
+.wpsoft-search button:focus {
+  transform: translateY(-2px);
+}
+
+.wpsoft-layout {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 2rem;
+  margin-top: -60px;
+  align-items: start;
+}
+
+.wpsoft-main {
+  min-width: 0;
+}
+
+.wpsoft-category-sidebar {
+  position: relative;
+  z-index: 1;
+}
+
+.wpsoft-category-sidebar .sidebar-inner {
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 20px 45px rgba(15, 23, 42, 0.08);
+  padding: 1.5rem 1.75rem;
+  border: 1px solid rgba(15, 23, 42, 0.06);
+  position: sticky;
+  top: 120px;
+}
+
+.wpsoft-category-sidebar .sidebar-title {
+  margin: 0 0 1rem;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #1f2937;
+}
+
+.wpsoft-category-sidebar .category-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.category-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.category-parent,
+.category-child {
+  display: block;
+  text-decoration: none;
+  color: #1f2937;
+  font-weight: 600;
+  padding: 0.35rem 0.75rem;
+  border-radius: 10px;
+  border-left: 3px solid transparent;
+  transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+.category-parent {
+  font-size: 0.98rem;
+}
+
+.category-child {
+  font-size: 0.9rem;
+  font-weight: 500;
+  padding-left: 1.5rem;
+  color: rgba(17, 24, 39, 0.85);
+}
+
+.category-parent:hover,
+.category-parent:focus,
+.category-child:hover,
+.category-child:focus {
+  background: rgba(59, 130, 246, 0.12);
+  border-color: rgba(59, 130, 246, 0.8);
+  color: #1d4ed8;
+}
+
+.category-parent.is-active,
+.category-child.is-active {
+  background: rgba(59, 130, 246, 0.14);
+  border-color: #2563eb;
+  color: #1d4ed8;
+}
+
+.category-children {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  padding-left: 0.25rem;
+}
+
+.wpsoft-categories {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.wpsoft-category-card {
+  padding: 1.75rem;
+}
+
+.wpsoft-category-card + .wpsoft-category-card {
+  margin-top: 1.5rem;
+}
+
+.wpsoft-category-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.25rem;
+}
+
+.wpsoft-category-heading h2 {
+  margin: 0;
+  font-size: 1.25rem;
+}
+
+.wpsoft-category-heading .subcategories {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.wpsoft-software-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1.25rem;
+}
+
+.wpsoft-software-item {
+  padding: 1.25rem;
+  border-radius: 12px;
+  border: 1px solid rgba(15, 23, 42, 0.06);
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.wpsoft-software-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 25px 40px rgba(15, 23, 42, 0.08);
+}
+
+.wpsoft-software-title {
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+.wpsoft-version-list {
+  display: grid;
+  gap: 0.5rem;
+}
+
+.wpsoft-version-list a {
+  padding: 0.5rem 0.75rem;
+  border-radius: 10px;
+  background: rgba(37, 99, 235, 0.08);
+  color: #1d4ed8;
+  text-decoration: none;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.wpsoft-version-list a span {
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: #1f2937;
+}
+
+.wpsoft-meta-list {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  font-size: 0.85rem;
+  color: var(--wpsoft-muted);
+}
+
+.wpsoft-breadcrumb {
+  margin: 1rem 0 2rem;
+  font-size: 0.9rem;
+  color: var(--wpsoft-muted);
+}
+
+.wpsoft-breadcrumb a {
+  color: var(--wpsoft-primary);
+  text-decoration: none;
+}
+
+.wpsoft-breadcrumb .sep {
+  margin: 0 0.5rem;
+}
+
+.single-software .wpsoft-hero {
+  background: #fff;
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: 0 25px 45px rgba(15, 23, 42, 0.08);
+}
+
+.single-software .wpsoft-hero h1 {
+  margin-top: 0;
+  font-size: 2rem;
+}
+
+.single-software .wpsoft-hero .wpsoft-meta-list {
+  margin-top: 0.5rem;
+}
+
+.single-software .download-buttons {
+  display: grid;
+  gap: 0.75rem;
+  margin: 1.5rem 0;
+}
+
+.single-software .download-buttons a {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.85rem 1rem;
+  border-radius: 12px;
+  text-decoration: none;
+  background: rgba(37, 99, 235, 0.1);
+  color: #1f2937;
+  font-weight: 600;
+}
+
+.single-software .download-buttons a:hover {
+  background: rgba(37, 99, 235, 0.2);
+}
+
+.single-software .tutorial-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #1d4ed8;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.site-footer {
+  background: #111827;
+  color: rgba(255, 255, 255, 0.78);
+  padding: 2rem 0;
+  margin-top: 4rem;
+}
+
+.site-footer a {
+  color: rgba(255, 255, 255, 0.85);
+  text-decoration: none;
+}
+
+.site-footer .wpsoft-footer-links {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+}
+
+.search-no-results {
+  text-align: center;
+  padding: 3rem 0;
+}
+
+.search-no-results h1 {
+  font-size: 1.75rem;
+  margin-bottom: 0.75rem;
+}
+
+@media (max-width: 768px) {
+  .site-header .wpsoft-topbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .wpsoft-search form {
+    flex-direction: column;
+  }
+
+  .wpsoft-search button {
+    width: 100%;
+  }
+
+  .wpsoft-meta-list {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .wpsoft-category-sidebar .sidebar-inner {
+    padding: 1.25rem 1.5rem;
+  }
+
+  .category-parent,
+  .category-child {
+    border-radius: 8px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .wpsoft-layout {
+    grid-template-columns: 1fr;
+    margin-top: -40px;
+  }
+
+  .wpsoft-category-sidebar .sidebar-inner {
+    position: static;
+  }
+}
